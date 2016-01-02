@@ -1,0 +1,39 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+#relative_permalinks: true
+
+# Setup
+title:               Ewan Harrow
+tagline:             Imagined Realities
+url:                 http://ewanharrow.com
+paginate:            5
+baseurl:             ""
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              Ewan Harrow
+  url:               https://twitter.com/ewanharrow
+  email:             ewan@harrow.org
+
+# Custom vars
+version:             2.0.0
+github:
+  repo:              https://github.com/eharrow/eharrow
+
+gems:
+  - jekyll-paginate
+  - jekyll-gist
+
+pages_list:       
+  # About: '/about'
+  Archive: '/archive'
+  Feed: '/atom.xml'

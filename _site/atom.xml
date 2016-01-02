@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Ewan Harrow</title>
+ <link href="http://ewanharrow.com/atom.xml" rel="self"/>
+ <link href="http://ewanharrow.com/"/>
+ <updated>2016-01-01T19:55:19+00:00</updated>
+ <id>http://ewanharrow.com</id>
+ <author>
+   <name>Ewan Harrow</name>
+   <email>ewan@harrow.org</email>
+ </author>
+
+ 
+ <entry>
+   <title>Introducing Imagined Realities</title>
+   <link href="http://ewanharrow.com/2016/01/01/introducing-imagined-realities/"/>
+   <updated>2016-01-01T00:00:00+00:00</updated>
+   <id>http://ewanharrow.com/2016/01/01/introducing-imagined-realities</id>
+   <content type="html">&lt;p&gt;First day of a new year which deserves a new resolution to document who, what, how, where and when so that I have a reference.&lt;/p&gt;
+
+&lt;p&gt;The first thing to note is that this site is made with &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; and hosted on &lt;a href=&quot;http://github.com&quot;&gt;Github&lt;/a&gt; pages.&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>
