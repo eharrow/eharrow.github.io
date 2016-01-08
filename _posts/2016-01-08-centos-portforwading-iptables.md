@@ -2,7 +2,7 @@
 layout: post
 title: Centos Port Forwarding
 ---
-Before I forget I had an issue with port forwarding a webapp from the base centos vm to my host through vagrant.  In the past the issue has always been starting the webapp listening on a non-“0.0.0.0” adapter but the webapp's config is quite explicit that it is set to listen on the right one.  A quick nestat test proved this:
+Before I forget I had an issue with port forwarding a webapp from the base centos vm to my host through vagrant - the webapp was unresponsive and requests would eventually timeout.  In the past the issue has always been starting the webapp listening on a non-“0.0.0.0” adapter but the webapp's config is quite explicit that it is set to listen on the right one.  A quick nestat test proved this:
 
 `$ netstat -o -n -a | grep 84`
 
@@ -17,3 +17,5 @@ That is not the problem then.  Further investigation using `sudo tcpdump -i any 
 The issue turns out to be that the base centos image has iptables set up to stop it.
 
 `sudo iptable -F` resolved it and now outbound responses are routed back.
+
+Note that this does not affect a base Ubuntu image.
