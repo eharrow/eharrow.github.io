@@ -12,11 +12,10 @@ tcp        0      0 0.0.0.0:8484                0.0.0.0:*                   LIST
 unix  2      [ ACC ]     STREAM     LISTENING     10584  private/scache
 ```
 <!--break-->
-
 That is not the problem then.  Further investigation using `sudo tcpdump -i any not port 22` showed requests coming in and yet no response in the browser.
 
 The issue turns out to be that the base centos image has iptables set up to stop it.
 
-`sudo iptable -F` resolved it and now outbound responses are routed back.
+`sudo iptables -F` resolved it and now outbound responses are routed back.
 
 Note that this does not affect a base Ubuntu image.

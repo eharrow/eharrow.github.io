@@ -13,13 +13,8 @@ title: Home
     </h1>
 
     <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
-
-    {{ post.content | split:'<!--break-->' | first }}
-    {% if post.content contains '<!--break-->' %}
-      <br/>
-      <a href="{{ post.url }}">read more</a>
-    {% endif %}
-    <div class="addthis_sharing_toolbox"></div>
+       {{ post.excerpt }}
+      <a href="{{ post.url }}">read more of {{ post.title }}</a>
   </article>
   <hr/>
   {% endfor %}
