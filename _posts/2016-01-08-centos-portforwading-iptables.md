@@ -4,7 +4,7 @@ title: Centos Port Forwarding
 ---
 Before I forget I had an issue with port forwarding a webapp from the base centos vm to my host through vagrant - the webapp was unresponsive and requests would eventually timeout.  In the past the issue has always been starting the webapp listening on a non-“0.0.0.0” adapter but the webapp's config is quite explicit that it is set to listen on the right one.  A quick nestat test proved this:
 
-`$ netstat -o -n -a | grep 84`
+`$ netstat -o -n -a | grep 84` where the webapp is listening on 8484
 
 ```vagrant@localhost vagrant]$ netstat -o -n -a | grep 84
 tcp        0      0 0.0.0.0:58494               0.0.0.0:*                   LISTEN      off (0.00/0/0)
