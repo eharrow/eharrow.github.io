@@ -12,24 +12,25 @@ title: Home
       </a>
     </h1>
 
-    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
-       {{ post.excerpt }}
-       <p>&hellip;</p>
-      <a href="{{ post.url }}">read more of {{ post.title }} &rarr;</a>
+    <span class="text-muted"><time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time></span>
+    {{ post.excerpt }}
+    <p>&hellip;</p>
+    <a href="{{ post.url }}">read more of {{ post.title }} &rarr;</a>
   </article>
   <hr/>
   {% endfor %}
 </div>
 
-<div class="pagination">
+<div class="center-block">
   {% if paginator.next_page %}
-  <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
+  <a class="btn btn-default" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
   {% else %}
-  <span class="pagination-item older">Older</span>
+  <button class="btn btn-default" disabled="disabled">Older</button>
   {% endif %}
+
   {% if paginator.previous_page %}
-  <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
+  <a class="btn btn-default" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
   {% else %}
-  <span class="pagination-item newer">Newer</span>
+  <button class="btn btn-default" disabled="disabled">Newer</button>
   {% endif %}
 </div>
