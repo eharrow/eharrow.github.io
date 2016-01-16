@@ -21,6 +21,10 @@
       {{ content }}
     </main>
 
+  {% include google_adsense.html %}
+
+    <hr>
+    
     <footer class="footer">
       <small>
         &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.
@@ -28,7 +32,6 @@
     </footer>
   </div>
   {% include google_analytics.html %}
-  {% include google_adsense.html %}
   <!-- Go to www.addthis.com/dashboard to customize your tools -->
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5694e3d6d315da1a" async="async"></script>
 </body>
