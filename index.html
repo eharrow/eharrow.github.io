@@ -21,16 +21,16 @@ title: Home
   {% endfor %}
 </div>
 
-<div class="center-block">
-  {% if paginator.next_page %}
-  <a class="btn btn-default" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
+<ul class="pager">
+  {% if paginator.previous_page %}
+  <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Older</a></li>
   {% else %}
-  <button class="btn btn-default" disabled="disabled">Older</button>
+  <li class="disabled"><a href="#">Older</a></li>
   {% endif %}
 
-  {% if paginator.previous_page %}
-  <a class="btn btn-default" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
+  {% if paginator.next_page %}
+  <li><a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Newer</a></li>
   {% else %}
-  <button class="btn btn-default" disabled="disabled">Newer</button>
+  <li class="disabled"><a href="#">Newer</a></li>
   {% endif %}
-</div>
+</ul>
