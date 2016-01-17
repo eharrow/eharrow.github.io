@@ -15,7 +15,7 @@ title: Home
     <span class="text-muted"><time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time></span>
     {{ post.excerpt }}
     <p>&hellip;</p>
-    <a href="{{ post.url }}">read more of {{ post.title }} &rarr;</a>
+    <a href="{{ post.url }}">Read more of <strong>{{ post.title }}</strong> &rarr;</a>
   </article>
   <hr/>
   {% endfor %}
@@ -23,14 +23,14 @@ title: Home
 
 <ul class="pager">
   {% if paginator.previous_page %}
-  <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Older</a></li>
+  <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a></li>
   {% else %}
-  <li class="disabled"><a href="#">Older</a></li>
+  <li class="disabled"><a href="#">Newer</a></li>
   {% endif %}
 
   {% if paginator.next_page %}
-  <li><a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Newer</a></li>
+  <li><a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a></li>
   {% else %}
-  <li class="disabled"><a href="#">Newer</a></li>
+  <li class="disabled"><a href="#">Older</a></li>
   {% endif %}
 </ul>
