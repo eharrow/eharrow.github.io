@@ -23,14 +23,14 @@ title: Home
 
 <ul class="pager">
   {% if paginator.previous_page %}
-  <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a></li>
+  <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">&laquo; Newer</a></li>
   {% else %}
-  <li class="disabled"><a href="#">Newer</a></li>
+  <li class="disabled"><a href="#">&laquo; Newer</a></li>
   {% endif %}
 
   {% if paginator.next_page %}
-  <li><a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a></li>
+  <li><a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older &raquo;</a></li>
   {% else %}
-  <li class="disabled"><a href="#">Older</a></li>
+  <li class="disabled"><a href="#">Older &raquo;</a></li>
   {% endif %}
 </ul>
