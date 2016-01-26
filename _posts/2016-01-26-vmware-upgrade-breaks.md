@@ -1,6 +1,6 @@
 ---
 layout: post
-title: VirtualBox Upgrades Breakage
+title: VirtualBox Upgrade Breakage
 ---
 
 VirtualBox prompted that there was an update today.  After dutifully downloading and installing ```vagrant up``` failed with:
