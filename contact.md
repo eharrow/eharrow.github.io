@@ -3,8 +3,8 @@ layout: default
 title: About
 ---
 
-# About
-
+# Contact
+[PGP Public Key](../ewan-at-harrow-pub.pgp)
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
