@@ -34,6 +34,6 @@ gems:
 #  - jekyll-gist
 
 pages_list:
-  # About: '/about'
+  About: '/about'
   Archive: '/archive'
   Feed: '/atom.xml'
