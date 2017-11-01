@@ -4,7 +4,8 @@ title: Contact
 ---
 
 # Contact
-[PGP Public Key](../ewan-at-harrow-pub.pgp)
+[PGP Public Key <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>](../ewan-at-harrow-pub.pgp)
+
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
