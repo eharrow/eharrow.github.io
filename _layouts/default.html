@@ -5,53 +5,47 @@
 
 <body>
 
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/" title="Home"><span><img src="//s.gravatar.com/avatar/adbba981e6089490de752afe2f25d159?s=25" class="img-rounded" /></span> {{ site.title }}</a>
-
+  <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+      <a class="navbar-brand" href="/" title="Home">
+        <span><img src="//s.gravatar.com/avatar/adbba981e6089490de752afe2f25d159?s=25" class="rounded"></span> {{ site.title }}
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            {% for page in site.pages_list %}
+              <li class="nav-item"><a href="{{ page[1]  }}" class="nav-link">{{ page[0] }}</a></li>
+            {% endfor %}
+          </ul>
       </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          {% for page in site.pages_list %}
-          <li><a href="{{ page[1]  }}">{{ page[0] }}</a></li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
   </nav>
 
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-offset-2 col-sm-8 col-sm-offset-2">{{ content }}</div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <div>{% include google_adsense.html %}</div>
+      <div class="row">
+          <div class="mx-sm-auto col-md-8 mx-sm-auto">{{ content }}</div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-offset-2 col-sm-8 center-block col-sm-offset-2">
-        <hr>
-        <footer>
-          <small>
-            &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.
-          </small>
-        </footer>
+      <div class="row">
+          <div class="col-md-12">
+              <div>{% include google_adsense.html %}</div>
+          </div>
       </div>
-    </div>
+      <div class="row">
+          <div class="mx-sm-auto col-md-8 mx-auto mx-sm-auto">
+              <hr>
+              <footer> <small>
+
+              &#xA9; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: &apos;%Y&apos; }}</time>. All rights reserved.
+
+            </small>
+              </footer>
+          </div>
+      </div>
   </div>
 
-  <!-- jQuery library -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-  <!-- Latest compiled JavaScript -->
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   {% include google_analytics.html %}
   <!-- Go to www.addthis.com/dashboard to customize your tools -->
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5694e3d6d315da1a" async="async"></script>
