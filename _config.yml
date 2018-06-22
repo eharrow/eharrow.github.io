@@ -29,7 +29,7 @@ version:             2.0.0
 github:
   repo:              https://github.com/eharrow/eharrow
 
-gems:
+plugins:
   - jekyll-paginate
 #  - jekyll-gist
 
