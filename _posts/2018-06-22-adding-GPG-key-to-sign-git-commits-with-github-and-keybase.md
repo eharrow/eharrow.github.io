@@ -3,11 +3,13 @@ layout: post
 title: Adding GPG Key to Sign Git Commits with Github and Keybase
 category: crypto git
 ---
-If you wanted or needed to see a verified label against a git commit e.g.
+If you wanted or needed to see a verified label against your git commit e.g.
 
 <img src="/public/gpg-verified-commit.png" class="img-fluid">
 
-then you need to add your gpg public key to your github account.  There are two parts to the process 1) get and export your public key to Github and 2) set up git to sign your commits with your private key.
+then you need to add your gpg public key to your github account.  There are two parts to the process:
+1. get and export your public key to Github.
+2. set up git to sign your commits with your private key.
 
 ## Get, Export and Set Your Public Key
 If you don't have a GPG key pair then consider [FSF's email self defence guide](https://emailselfdefense.fsf.org/en/) which is easy to follow and explains what and why pretty comprehensively.
