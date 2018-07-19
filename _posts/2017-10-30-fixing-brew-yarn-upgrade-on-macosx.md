@@ -2,6 +2,7 @@
 layout: post
 title: Fix Yarn Upgrade Brew Issue
 category: yarn
+comments: true
 ---
 
 I recently needed to upgrade Yarn and Brew told me to run `brew yarn upgrade` however that failed in the past so I moved on.  Today though I decided to fix the issue.  A `brew update` on my newly upgrade High Sierra mac left me with

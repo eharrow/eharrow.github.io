@@ -2,6 +2,7 @@
 layout: post
 title: Encryption for Everyone with Keybase
 category: crypto
+comments: true
 ---
 
 Finally some bright sparks have worked out how to do public key encryption that most people could manage - not my mother-in-law - but the barriers to entry have been lowered a lot.  [Keybase](https://keybase.io) uses or wraps PGP so they have not invented anything new but have "wrapped" it in a nice desktop (Electron I think) and device UI.
