@@ -3,8 +3,9 @@ layout: post
 title: VirtualBox Upgrade Breakage
 ---
 
-VirtualBox prompted that there was an update today.  After dutifully downloading and installing ```vagrant up``` failed with:
+VirtualBox prompted that there was an update today.  After dutifully downloading and installing `vagrant up` failed with:
 
+``` shell
 	==> default: Machine booted and ready!
 	==> default: Checking for guest additions in VM...
 	    default: The guest additions on this VM do not match the installed version of
@@ -13,7 +14,7 @@ VirtualBox prompted that there was an update today.  After dutifully downloading
 	    default: shared folder errors, please make sure the guest additions within the
 	    default: virtual machine match the version of VirtualBox you have installed on
 	    default: your host and reload your VM.
-	    default: 
+	    default:
 	    default: Guest Additions Version: 4.3.22
 	    default: VirtualBox Version: 5.0
 	==> default: Mounting shared folders...
@@ -29,10 +30,11 @@ VirtualBox prompted that there was an update today.  After dutifully downloading
 	The error output from the last command was:
 
 		/sbin/mount.vboxsf: mounting failed with the error: No such device
+```
 
+The guest additions, now updated with the new version of VirtualBox,  need to be installed into the guest vm.  Vagrant can do this for you using the command `vagrant plugin install vagrant-vbguest` which can take a minute or so to run.  Run vagrant up and be prepared to wait while the vm installs the latest guest addition from your host.
 
-The guest additions, now updated with the new version of VirtualBox,  need to be installed into the guest vm.  Vagrant can do this for you using the command ```vagrant plugin install vagrant-vbguest``` which can take a minute or so to run.  Run vagrant up and be prepared to wait while the vm installs the latest guest addition from your host.
-
+``` shell
 	$ vagrant up;vagrant ssh
 	Bringing machine 'default' up with 'virtualbox' provider...
 	==> default: Checking if box 'puppetlabs/centos-6.6-64-puppet' is up to date...
@@ -92,4 +94,4 @@ The guest additions, now updated with the new version of VirtualBox,  need to be
 	==> default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
 	==> default: flag to force provisioning. Provisioners marked to run always will still run.
 	Last login: Tue Jan 26 09:06:27 2016 from 10.0.2.2
-
+```
