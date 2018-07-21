@@ -26,6 +26,12 @@ $ gpg --list-secret-keys --keyid-format LONG
 sec   rsa2048/B782D1B96DED7230 2018-03-27 [SC] [expires: 2020-03-26]
       02C478D0E5023223FFE1ABA7B782D1B96DED7230
 ```
+{% terminal %}
+$ echo "Hello world!"
+Hello world
+$ date
+Sun Dec 14 09:56:26 CET 2014
+{% endterminal %}
 
 Then we configure git to use it from now on whenever we commit.  You can also configure it on a per repo basis rather than for all.
 ```
