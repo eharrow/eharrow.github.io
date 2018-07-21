@@ -28,7 +28,7 @@ sec   rsa2048/B782D1B96DED7230 2018-03-27 [SC] [expires: 2020-03-26]
 ```
 
 Then we configure git to use it from now on whenever we commit.  You can also configure it on a per repo basis rather than for all.
-```
+``` shell
 $ git config --global user.signingkey B782D1B96DED7230
 $ git config --global commit.gpgsign true
 ```
