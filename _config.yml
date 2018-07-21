@@ -32,7 +32,6 @@ github:
 plugins:
   - jekyll-paginate
   - jemoji
-  - jekyll-terminal
 #  - jekyll-gist
 
 pages_list:
