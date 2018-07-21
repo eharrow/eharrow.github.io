@@ -19,7 +19,7 @@ With your public key you now need to add it to Github but first find your key an
 
 Firstly you need to get your private or secret key id which is `B782D1B96DED7230` for me.
 
-```
+``` shell
 $ gpg --list-secret-keys --keyid-format LONG
 /Users/ewan/.gnupg/pubring.kbx
 ------------------------------

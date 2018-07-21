@@ -19,7 +19,7 @@
 
 // @import "base";
 // @import "type";
-// @import "syntax";
+@import "syntax";
 // @import "code";
 // @import "layout";
 // @import "masthead";
@@ -27,11 +27,16 @@
 // @import "pagination";
 // @import "message";
 
-code {
-    background: hsl(220, 80%, 90%);
-}
 
-pre {
-    white-space: pre-wrap;
-    background: hsl(30,80%,90%);
-}
+// code {
+//     background: hsl(220, 80%, 90%);
+// }
+//
+// pre {
+//   background-color: black;
+//   color: white;
+//   font-size: medium ;
+//   font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+//   width: 100%;
+//   display: inline-block;
+// }
