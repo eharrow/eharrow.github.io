@@ -49,7 +49,7 @@ $ export GPG_TTY=$(tty)
 $ git commit -m "updated"
 ```
 
-I usually use Sourcetree and making this sign commits was a bit more involved.  Sourcetree requires GPG v2 to sign so install it update git to use it.  On a Mac with [homebrew](https://brew.sh) I did:
+I usually use Sourcetree and making this sign commits was a bit more involved.  Sourcetree requires GPG v2 to sign so install it and update git to use it.  On a Mac with [homebrew](https://brew.sh) I did:
 
 ``` shell
 $ brew install gnupg2
@@ -62,5 +62,7 @@ SourceTree needs to use this version (system) as opposed to the bundled or embed
 $ brew install pinentry-mac
 $ echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
 ```
+
+<img src="/public/pinentry.png" class="img-fluid">
 
 Test with a simple commit and fingers crossed git and gpg are ok.  If there are no complaints then check in Sourcetree that the committer (you) is verified and even better if the remote repo is on Github it should say verified as well.
