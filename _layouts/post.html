@@ -36,9 +36,9 @@ layout: default
         <div>{% include disqus.html %}</div>
     </div>
 </div>
-{% else if jekyll.environment != "production"%}
-<div class="alert alert-warning" role="alert">
-  <strong>Warning:</strong> Comments have <strong>not</strong>
-  been enabled for this post - correct?
-</div>
+{% elsif jekyll.environment != "production"%}
+  <div class="alert alert-warning" role="alert">
+    <strong>Warning:</strong> Comments have <strong>not</strong>
+    been enabled for this post - correct?
+  </div>
 {% endif %}
