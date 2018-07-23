@@ -7,7 +7,7 @@ layout: default
   <span class="text-muted"><time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time></span>
   {% for cat in page.categories %}<span class="badge badge-secondary">{{cat}}</span> {% endfor %}
   {{ content }}
-  <div class="addthis_sharing_toolbox"></div>
+  {% if jekyll.environment == "production" %}<div class="addthis_sharing_toolbox"></div>{% endif %}
   <hr/>
 </article>
 
