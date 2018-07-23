@@ -46,7 +46,7 @@ found 0 vulnerabilities
 Successfully created .eslintrc.js file in /Users/ewan/Documents/dev/my-test-mod
 ```
 
-Finally I'll a dependency to my project:
+Finally I'll add the dependency to my project:
 ``` shell
 Tognini:my-test-mod ewan$ yarn add lodash
 yarn add v1.7.0
@@ -85,7 +85,7 @@ Login to the package manager which will take care of adding your account to the 
 Tognini:my-test-mod ewan$ yarn login
 yarn login v1.7.0
 question npm username: erch
-question npm email: ewan@harrow.org
+question npm email: ewan@ha****.org
 ✨  Done in 9.91s.
 ```
 
@@ -100,7 +100,7 @@ question New version:
 info Proceeding with current version: 1.0.0-SNAPHOT
 [2/4] Logging in...
 info npm username: erch
-info npm email: ewan@harrow.org
+info npm email: ewan@ha****.org
 question npm password:
 (node:65052) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
 success Logged in.
