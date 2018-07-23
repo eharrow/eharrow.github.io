@@ -5,8 +5,7 @@ layout: default
 <article class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="text-muted"><time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time></span>
-  {% assign categories = page.category | split: " " %}
-  {% for cat in categories %}<span class="badge badge-secondary">{{cat}}</span> {% endfor %}
+  {% for cat in page.categories %}<span class="badge badge-secondary">{{cat}}</span> {% endfor %}
   {{ content }}
   <div class="addthis_sharing_toolbox"></div>
   <hr/>

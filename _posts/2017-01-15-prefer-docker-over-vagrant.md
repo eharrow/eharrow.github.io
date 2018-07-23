@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Prefer Docker over Vagrant
-category: docker
+categories: docker
 ---
 
 A year ago I was using Vagrant as my preferred  way to develop on my mac as it

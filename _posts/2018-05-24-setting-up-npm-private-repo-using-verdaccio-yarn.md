@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Setting Up a Private NPM Repository with Yarn and Verdaccio
-category: yarn
+categories: yarn
 comments: true
 ---
 

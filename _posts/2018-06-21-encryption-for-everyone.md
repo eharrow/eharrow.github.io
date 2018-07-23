@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Encryption for Everyone with Keybase
-category: crypto
+categories: crypto
 comments: true
 ---
 
