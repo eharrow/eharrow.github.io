@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Verdaccio
+title: Verdaccio Publishing
 categories: yarn
 comments: true
 ---
-This is a follow on post to [Setting Up a Private NPM Repository with Yarn and Verdaccio]({{ site.baseurl }}{% post_url 2018-05-24-setting-up-npm-private-repo-using-verdaccio-yarn %}) to illustrate publishing to Verdaccio.  Verdaccio seems to work pretty well as a NPM proxy and registry and comes with a web UI to browse your published packages and their dependencies.
+This is a follow on post to [Setting Up a Private NPM Repository with Yarn and Verdaccio]({{ site.baseurl }}{% post_url 2018-05-24-setting-up-npm-private-repo-using-verdaccio-yarn %}) to illustrate publishing to Verdaccio.  Verdaccio seems to work pretty well as a NPM proxy and *private* registry and comes with a web UI to browse your published packages and their dependencies.
 
 Lets get started.  Firstly I'll assume that you have verdaccio installed and running.  I prefer to use Docker and briefly go over booting it up in the previous post above.  The next task is that we will create a brand new clean node module.
 
 ### Create a Test Module
-Create a new directory which I'll call my-test-mod and `yarn init`.
+Create a new directory which I'll call my-test-mod and `yarn init`.  Tip make this a public module which might seem counter to what you would usually do but NPM and Yarn won't publish at all if it is set to private in package.json - don't worry you are only publishing to your verdaccio and not to npm.org.
 
 ``` shell
 Tognini:dev ewan$ mkdir my-test-mod
@@ -23,7 +23,7 @@ question entry point (index.js):
 question repository url:
 question author: Ewan Harrow
 question license (MIT):
-question private: true
+question private:
 success Saved package.json
 ✨  Done in 81.77s.
 ```
