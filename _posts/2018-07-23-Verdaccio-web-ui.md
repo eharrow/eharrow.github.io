@@ -70,12 +70,14 @@ Tognini:my-test-mod ewan$
 ```
 
 
-I'd better add some source as well:
+I'd better add some source as well so create a new file `index.js` with the following contents:
 
-``` shell
-Tognini:my-test-mod ewan$ echo "console.log('test');" > index.js
-Tognini:my-test-mod ewan$ node index.js
-test
+``` javascript
+module.exports = {
+  testMe: function() {
+    return "Test from module";
+  }
+};
 ```
 
 ### Publish to Verdaccio
@@ -165,4 +167,18 @@ Tognini:my-test-app-using-test-module ewan$ ls node_modules/
 lodash			my-test-mod
 Tognini:my-test-app-using-test-module ewan$ ls node_modules/my-test-mod/
 index.js		package-lock.json	package.json
+```
+
+Try to actually use the module so copy the following into a new file `index.js`:
+
+``` javascript
+const testMod = require('my-test-mod');
+console.log('using testMod: ' + testMod.testMe());
+```
+
+and execute with `node index.js`.
+
+``` shell
+Tognini:my-test-app-using-test-module ewan$ node index.js
+using testMod: Test from module
 ```
