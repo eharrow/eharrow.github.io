@@ -7,7 +7,7 @@ comments: true
 
 I recently needed to upgrade Yarn and Brew told me to run `brew yarn upgrade` however that failed in the past so I moved on.  Today though I decided to fix the issue.  A `brew update` on my newly upgrade High Sierra mac left me with
 
-``` shell
+``` terminal
 $ brew update
 xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
 Updated 1 tap (homebrew/core).
@@ -21,14 +21,14 @@ I don't use XCode though I appreciate the command line tools and dependencies an
 
 The trick
 
-``` shell
+``` terminal
 $ sudo xcode-select --install
 $ sudo xcode-select -switch /
 ```
 
 Then do a `brew update` which probably won't be required followed by the yarn upgrade.
 
-``` shell
+``` terminal
 $ brew upgrade yarn
 ==> Upgrading 1 outdated package, with result:
 yarn 1.2.1

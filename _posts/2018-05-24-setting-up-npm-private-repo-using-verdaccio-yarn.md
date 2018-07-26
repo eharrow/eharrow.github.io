@@ -11,28 +11,28 @@ An old stack  [question](https://stackoverflow.com/questions/7575627/can-you-hos
 
 Using Docker makes it easy.
 
-``` shell
+``` terminal
 $ docker pull verdaccio/verdaccio
 ```
 
 and to start it up
 
-``` shell
+``` terminal
 $ docker run -it --rm --name verdaccio -p 4873:4873 verdaccio/verdaccio
 ```
 
 To make Yarn or NPM use it then add the url as a registry setting:
-``` shell
+``` terminal
 $ npm set registry http://localhost:4873
 ```
 
 or for yarn
-``` shell
+``` terminal
 $ yarn config set registry http://localhost:4873
 ```
 
 followed by adding a dependency
-``` shell
+``` terminal
 $ yarn add lodash
 yarn add v1.7.0
 info No lockfile found.
@@ -45,7 +45,7 @@ info Visit https://yarnpkg.com/en/docs/cli/add for documentation about this comm
 
 Ooops I forgot to actually start Verdaccio.  Try again and success.
 
-``` shell
+``` terminal
 $ yarn add lodash
 yarn add v1.7.0
 info No lockfile found.

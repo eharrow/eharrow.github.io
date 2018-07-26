@@ -5,7 +5,7 @@ title: VirtualBox Upgrade Breakage
 
 VirtualBox prompted that there was an update today.  After dutifully downloading and installing `vagrant up` failed with:
 
-``` shell
+``` terminal
 	==> default: Machine booted and ready!
 	==> default: Checking for guest additions in VM...
 	    default: The guest additions on this VM do not match the installed version of
@@ -34,7 +34,7 @@ VirtualBox prompted that there was an update today.  After dutifully downloading
 
 The guest additions, now updated with the new version of VirtualBox,  need to be installed into the guest vm.  Vagrant can do this for you using the command `vagrant plugin install vagrant-vbguest` which can take a minute or so to run.  Run vagrant up and be prepared to wait while the vm installs the latest guest addition from your host.
 
-``` shell
+``` terminal
 	$ vagrant up;vagrant ssh
 	Bringing machine 'default' up with 'virtualbox' provider...
 	==> default: Checking if box 'puppetlabs/centos-6.6-64-puppet' is up to date...
