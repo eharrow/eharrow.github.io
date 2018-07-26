@@ -183,3 +183,5 @@ and execute with `node index.js`.
   Tognini:my-test-app-using-test-module ewan$ node index.js
   using testMod: Test from module
 ```
+
+*Success*
