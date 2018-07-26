@@ -11,7 +11,7 @@ Lets get started.  Firstly I'll assume that you have verdaccio installed and run
 ### Create a Test Module
 Create a new directory which I'll call my-test-mod and `yarn init`.  Tip make this a public module which might seem counter to what you would usually do but NPM and Yarn won't publish at all if it is set to private in package.json - don't worry you are only publishing to your verdaccio and not to npm.org.
 
-``` shell
+```terminal
 Tognini:dev ewan$ mkdir my-test-mod
 Tognini:dev ewan$ cd my-test-mod/
 Tognini:my-test-mod ewan$ yarn init
@@ -29,7 +29,8 @@ success Saved package.json
 ```
 
 I'll setup eslint as well to stop my ide moaning:
-``` shell
+
+```terminal
 Tognini:my-test-mod ewan$ eslint --init
 ? How would you like to configure ESLint? Use a popular style guide
 ? Which style guide do you want to follow? Google
@@ -47,7 +48,7 @@ Successfully created .eslintrc.js file in /Users/ewan/Documents/dev/my-test-mod
 ```
 
 Finally I'll add the dependency to my project:
-``` shell
+``` terminal
 Tognini:my-test-mod ewan$ yarn add lodash
 yarn add v1.7.0
 info No lockfile found.
@@ -83,7 +84,7 @@ module.exports = {
 ### Publish to Verdaccio
 Login to the package manager which will take care of adding your account to the registry.
 
-``` shell
+``` terminal
 Tognini:my-test-mod ewan$ yarn login
 yarn login v1.7.0
 question npm username: erch
@@ -93,7 +94,7 @@ question npm email: ewan@ha****.org
 
 You won't be asked for credentials until you try to publish.
 
-``` shell
+``` terminal
 Tognini:my-test-mod ewan$ yarn publish
 yarn publish v1.7.0
 [1/4] Bumping version...
@@ -122,7 +123,7 @@ We might be able to see the new module in the verdaccio registry but it needs to
 
 Therefore create another new module.
 
-``` shell
+``` terminal
 Tognini:dev ewan$ mkdir my-test-app-using-test-module
 Tognini:dev ewan$ cd my-test-app-using-test-module/
 Tognini:my-test-app-using-test-module ewan$ yarn init
@@ -141,7 +142,7 @@ success Saved package.json
 
 Now add the test modules as a dependency usng yarn:
 
-``` shell
+``` terminal
 Tognini:my-test-app-using-test-module ewan$ yarn add my-test-mod
 yarn add v1.7.0
 info No lockfile found.
@@ -162,7 +163,7 @@ info All dependencies
 
 Check that the module `my-test-mod` has been pulled in from the registry:
 
-``` shell
+``` terminal
 Tognini:my-test-app-using-test-module ewan$ ls node_modules/
 lodash			my-test-mod
 Tognini:my-test-app-using-test-module ewan$ ls node_modules/my-test-mod/
@@ -178,7 +179,7 @@ console.log('using testMod: ' + testMod.testMe());
 
 and execute with `node index.js`.
 
-``` shell
+``` terminal
 Tognini:my-test-app-using-test-module ewan$ node index.js
 using testMod: Test from module
 ```
