@@ -7,10 +7,10 @@ Before I forget I had an issue with port forwarding a webapp from the base cento
 `$ netstat -o -n -a | grep 84` where the webapp is listening on 8484
 
 ``` terminal
-vagrant@localhost vagrant]$ netstat -o -n -a | grep 84
-tcp        0      0 0.0.0.0:58494               0.0.0.0:*                   LISTEN      off (0.00/0/0)
-tcp        0      0 0.0.0.0:8484                0.0.0.0:*                   LISTEN      off (0.00/0/0)
-unix  2      [ ACC ]     STREAM     LISTENING     10584  private/scache
+  vagrant@localhost vagrant]$ netstat -o -n -a | grep 84
+  tcp        0      0 0.0.0.0:58494               0.0.0.0:*                   LISTEN      off (0.00/0/0)
+  tcp        0      0 0.0.0.0:8484                0.0.0.0:*                   LISTEN      off (0.00/0/0)
+  unix  2      [ ACC ]     STREAM     LISTENING     10584  private/scache
 ```
 <!--break-->
 That is not the problem then.  Further investigation using `sudo tcpdump -i any not port 22` showed requests coming in and yet no response in the browser.

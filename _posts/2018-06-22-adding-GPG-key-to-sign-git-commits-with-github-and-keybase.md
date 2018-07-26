@@ -20,47 +20,47 @@ With your public key you now need to add it to Github but first find your key an
 Firstly you need to get your private or secret key id which is `B782D1B96DED7230` for me.
 
 ``` terminal
-$ gpg --list-secret-keys --keyid-format LONG
-/Users/ewan/.gnupg/pubring.kbx
-------------------------------
-sec   rsa2048/B782D1B96DED7230 2018-03-27 [SC] [expires: 2020-03-26]
-      02C478D0E5023223FFE1ABA7B782D1B96DED7230
+  $ gpg --list-secret-keys --keyid-format LONG
+  /Users/ewan/.gnupg/pubring.kbx
+  ------------------------------
+  sec   rsa2048/B782D1B96DED7230 2018-03-27 [SC] [expires: 2020-03-26]
+        02C478D0E5023223FFE1ABA7B782D1B96DED7230
 ```
 
 Then we configure git to use it from now on whenever we commit.  You can also configure it on a per repo basis rather than for all.
 
 ``` terminal
-$ git config --global user.signingkey B782D1B96DED7230
-$ git config --global commit.gpgsign true
+  $ git config --global user.signingkey B782D1B96DED7230
+  $ git config --global commit.gpgsign true
 ```
 
 Now that is done we need to copy the associated public key to Github. Login to Github and open the keys page of settings and paste the exported public key in my case I used Keybase to do this.
 
 ``` terminal
-$ open https://github.com/settings/keys
-$ keybase pgp export -q B782D1B96DED7230 | pbcopy
+  $ open https://github.com/settings/keys
+  $ keybase pgp export -q B782D1B96DED7230 | pbcopy
 ```
 
 ## Signing Git Commits
 During testing I needed to set the ENV GPG_TTY and a quick test from the command line showed the signing working.
 
 ``` terminal
-$ export GPG_TTY=$(tty)
-$ git commit -m "updated"
+  $ export GPG_TTY=$(tty)
+  $ git commit -m "updated"
 ```
 
 I usually use Sourcetree and making this sign commits was a bit more involved.  Sourcetree requires GPG v2 to sign so install it and update git to use it.  On a Mac with [homebrew](https://brew.sh) I did:
 
 ``` terminal
-$ brew install gnupg2
-$ git config --global gpg.program gpg2
+  $ brew install gnupg2
+  $ git config --global gpg.program gpg2
 ```
 
 SourceTree needs to use this version (system) as opposed to the bundled or embedded git that is used by default so under preferences select the system git.  That should work but I needed add the means to enter the secret key when signing that SourceTree lacks but [pinentry-mac](https://formulae.brew.sh/formula/pinentry-mac) can do that.
 
 ``` terminal
-$ brew install pinentry-mac
-$ echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
+  $ brew install pinentry-mac
+  $ echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
 ```
 
 <img src="/public/pinentry.png" class="img-fluid">

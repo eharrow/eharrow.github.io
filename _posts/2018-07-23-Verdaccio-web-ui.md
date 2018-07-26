@@ -12,106 +12,106 @@ Lets get started.  Firstly I'll assume that you have verdaccio installed and run
 Create a new directory which I'll call my-test-mod and `yarn init`.  Tip make this a public module which might seem counter to what you would usually do but NPM and Yarn won't publish at all if it is set to private in package.json - don't worry you are only publishing to your verdaccio and not to npm.org.
 
 ```terminal
-Tognini:dev ewan$ mkdir my-test-mod
-Tognini:dev ewan$ cd my-test-mod/
-Tognini:my-test-mod ewan$ yarn init
-yarn init v1.7.0
-question name (my-test-mod):
-question version (1.0.0): 1.0.0-SNAPHOT
-question description: A test module for publishing
-question entry point (index.js):
-question repository url:
-question author: Ewan Harrow
-question license (MIT):
-question private:
-success Saved package.json
-✨  Done in 81.77s.
+  Tognini:dev ewan$ mkdir my-test-mod
+  Tognini:dev ewan$ cd my-test-mod/
+  Tognini:my-test-mod ewan$ yarn init
+  yarn init v1.7.0
+  question name (my-test-mod):
+  question version (1.0.0): 1.0.0-SNAPHOT
+  question description: A test module for publishing
+  question entry point (index.js):
+  question repository url:
+  question author: Ewan Harrow
+  question license (MIT):
+  question private:
+  success Saved package.json
+  ✨  Done in 81.77s.
 ```
 
 I'll setup eslint as well to stop my ide moaning:
 
 ```terminal
-Tognini:my-test-mod ewan$ eslint --init
-? How would you like to configure ESLint? Use a popular style guide
-? Which style guide do you want to follow? Google
-? What format do you want your config file to be in? JavaScript
-Checking peerDependencies of eslint-config-google@latest
-Installing eslint-config-google@latest
-npm notice created a lockfile as package-lock.json. You should commit this file.
-npm WARN eslint-config-google@0.9.1 requires a peer of eslint@>=4.1.1 but none is installed. You must install peer dependencies yourself.
+  Tognini:my-test-mod ewan$ eslint --init
+  ? How would you like to configure ESLint? Use a popular style guide
+  ? Which style guide do you want to follow? Google
+  ? What format do you want your config file to be in? JavaScript
+  Checking peerDependencies of eslint-config-google@latest
+  Installing eslint-config-google@latest
+  npm notice created a lockfile as package-lock.json. You should commit this file.
+  npm WARN eslint-config-google@0.9.1 requires a peer of eslint@>=4.1.1 but none is installed. You must install peer dependencies yourself.
 
-+ eslint-config-google@0.9.1
-added 1 package from 1 contributor and audited 1 package in 1.142s
-found 0 vulnerabilities
+  + eslint-config-google@0.9.1
+  added 1 package from 1 contributor and audited 1 package in 1.142s
+  found 0 vulnerabilities
 
-Successfully created .eslintrc.js file in /Users/ewan/Documents/dev/my-test-mod
+  Successfully created .eslintrc.js file in /Users/ewan/Documents/dev/my-test-mod
 ```
 
 Finally I'll add the dependency to my project:
 ``` terminal
-Tognini:my-test-mod ewan$ yarn add lodash
-yarn add v1.7.0
-info No lockfile found.
-[1/4] 🔍  Resolving packages...
-⠁ (node:64308) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
-[2/4] 🚚  Fetching packages...
-[3/4] 🔗  Linking dependencies...
-warning " > eslint-config-google@0.9.1" has unmet peer dependency "eslint@>=4.1.1".
-[4/4] 📃  Building fresh packages...
-success Saved lockfile.
-success Saved 2 new dependencies.
-info Direct dependencies
-├─ eslint-config-google@0.9.1
-└─ lodash@4.17.10
-info All dependencies
-├─ eslint-config-google@0.9.1
-└─ lodash@4.17.10
-✨  Done in 1.09s.
-Tognini:my-test-mod ewan$
+  Tognini:my-test-mod ewan$ yarn add lodash
+  yarn add v1.7.0
+  info No lockfile found.
+  [1/4] 🔍  Resolving packages...
+  ⠁ (node:64308) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+  [2/4] 🚚  Fetching packages...
+  [3/4] 🔗  Linking dependencies...
+  warning " > eslint-config-google@0.9.1" has unmet peer dependency "eslint@>=4.1.1".
+  [4/4] 📃  Building fresh packages...
+  success Saved lockfile.
+  success Saved 2 new dependencies.
+  info Direct dependencies
+  ├─ eslint-config-google@0.9.1
+  └─ lodash@4.17.10
+  info All dependencies
+  ├─ eslint-config-google@0.9.1
+  └─ lodash@4.17.10
+  ✨  Done in 1.09s.
+  Tognini:my-test-mod ewan$
 ```
 
 
 I'd better add some source as well so create a new file `index.js` with the following contents:
 
 ``` javascript
-module.exports = {
-  testMe: function() {
-    return "Test from module";
-  }
-};
+  module.exports = {
+    testMe: function() {
+      return "Test from module";
+    }
+  };
 ```
 
 ### Publish to Verdaccio
 Login to the package manager which will take care of adding your account to the registry.
 
 ``` terminal
-Tognini:my-test-mod ewan$ yarn login
-yarn login v1.7.0
-question npm username: erch
-question npm email: ewan@ha****.org
-✨  Done in 9.91s.
+  Tognini:my-test-mod ewan$ yarn login
+  yarn login v1.7.0
+  question npm username: erch
+  question npm email: ewan@ha****.org
+  ✨  Done in 9.91s.
 ```
 
 You won't be asked for credentials until you try to publish.
 
 ``` terminal
-Tognini:my-test-mod ewan$ yarn publish
-yarn publish v1.7.0
-[1/4] Bumping version...
-info Current version: 1.0.0-SNAPHOT
-question New version:
-info Proceeding with current version: 1.0.0-SNAPHOT
-[2/4] Logging in...
-info npm username: erch
-info npm email: ewan@ha****.org
-question npm password:
-(node:65052) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
-success Logged in.
-[3/4] Publishing...
-success Published.
-[4/4] Revoking token...
-success Revoked login token.
-✨  Done in 4.98s.
+  Tognini:my-test-mod ewan$ yarn publish
+  yarn publish v1.7.0
+  [1/4] Bumping version...
+  info Current version: 1.0.0-SNAPHOT
+  question New version:
+  info Proceeding with current version: 1.0.0-SNAPHOT
+  [2/4] Logging in...
+  info npm username: erch
+  info npm email: ewan@ha****.org
+  question npm password:
+  (node:65052) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+  success Logged in.
+  [3/4] Publishing...
+  success Published.
+  [4/4] Revoking token...
+  success Revoked login token.
+  ✨  Done in 4.98s.
 ```
 
 If you now go to http://localhost:4873 you should see your module listed and drilling down will show the package's details derived from package.json.
@@ -124,62 +124,62 @@ We might be able to see the new module in the verdaccio registry but it needs to
 Therefore create another new module.
 
 ``` terminal
-Tognini:dev ewan$ mkdir my-test-app-using-test-module
-Tognini:dev ewan$ cd my-test-app-using-test-module/
-Tognini:my-test-app-using-test-module ewan$ yarn init
-yarn init v1.7.0
-question name (my-test-app-using-test-module):
-question version (1.0.0): 1.0.0-SNAPSHOT
-question description: an app that uses my-test-mod
-question entry point (index.js):
-question repository url:
-question author: Ewan Harrow
-question license (MIT):
-question private:
-success Saved package.json
-✨  Done in 38.69s.
+  Tognini:dev ewan$ mkdir my-test-app-using-test-module
+  Tognini:dev ewan$ cd my-test-app-using-test-module/
+  Tognini:my-test-app-using-test-module ewan$ yarn init
+  yarn init v1.7.0
+  question name (my-test-app-using-test-module):
+  question version (1.0.0): 1.0.0-SNAPSHOT
+  question description: an app that uses my-test-mod
+  question entry point (index.js):
+  question repository url:
+  question author: Ewan Harrow
+  question license (MIT):
+  question private:
+  success Saved package.json
+  ✨  Done in 38.69s.
 ```
 
 Now add the test modules as a dependency usng yarn:
 
 ``` terminal
-Tognini:my-test-app-using-test-module ewan$ yarn add my-test-mod
-yarn add v1.7.0
-info No lockfile found.
-[1/4] 🔍  Resolving packages...
-⠁ (node:65153) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
-[2/4] 🚚  Fetching packages...
-[3/4] 🔗  Linking dependencies...
-[4/4] 📃  Building fresh packages...
-success Saved lockfile.
-success Saved 3 new dependencies.
-info Direct dependencies
-└─ my-test-mod@1.0.0-SNAPHOT
-info All dependencies
-├─ lodash@4.17.10
-└─ my-test-mod@1.0.0-SNAPHOT
-✨  Done in 2.30s.
+  Tognini:my-test-app-using-test-module ewan$ yarn add my-test-mod
+  yarn add v1.7.0
+  info No lockfile found.
+  [1/4] 🔍  Resolving packages...
+  ⠁ (node:65153) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+  [2/4] 🚚  Fetching packages...
+  [3/4] 🔗  Linking dependencies...
+  [4/4] 📃  Building fresh packages...
+  success Saved lockfile.
+  success Saved 3 new dependencies.
+  info Direct dependencies
+  └─ my-test-mod@1.0.0-SNAPHOT
+  info All dependencies
+  ├─ lodash@4.17.10
+  └─ my-test-mod@1.0.0-SNAPHOT
+  ✨  Done in 2.30s.
 ```
 
 Check that the module `my-test-mod` has been pulled in from the registry:
 
 ``` terminal
-Tognini:my-test-app-using-test-module ewan$ ls node_modules/
-lodash			my-test-mod
-Tognini:my-test-app-using-test-module ewan$ ls node_modules/my-test-mod/
-index.js		package-lock.json	package.json
+  Tognini:my-test-app-using-test-module ewan$ ls node_modules/
+  lodash			my-test-mod
+  Tognini:my-test-app-using-test-module ewan$ ls node_modules/my-test-mod/
+  index.js		package-lock.json	package.json
 ```
 
 Try to actually use the module so copy the following into a new file `index.js`:
 
 ``` javascript
-const testMod = require('my-test-mod');
-console.log('using testMod: ' + testMod.testMe());
+  const testMod = require('my-test-mod');
+  console.log('using testMod: ' + testMod.testMe());
 ```
 
 and execute with `node index.js`.
 
 ``` terminal
-Tognini:my-test-app-using-test-module ewan$ node index.js
-using testMod: Test from module
+  Tognini:my-test-app-using-test-module ewan$ node index.js
+  using testMod: Test from module
 ```
