@@ -34,3 +34,5 @@ Lets Go.
 1. Plugin the pistol via the USB cable and turn the pistol on.  In the VirtualBox menubar will be an item for USB devices select it and choose <driver name>.
 1. In the windows VM double clicke the downloaded laser control software which will open and hopefully have COM1, COM2 or COM3 in the field.  If so click the *Connect* button.
 1. Point the pistol at the target and adjust the rear sights for horizontal and vertical differences.
+1. Shoot to test.
+1. Readjust as necessary.
