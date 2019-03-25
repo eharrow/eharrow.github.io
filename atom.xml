@@ -19,7 +19,13 @@ layout: null
  <entry>
    <title>{{ post.title }}</title>
    <link href="{{ site.url }}{{ site.baseurl }}{{ post.url }}"/>
+   {% if post.last_updated %}
+   <updated>{{ post.last_updated | date_to_xmlschema }}</updated>
+   {% elsif post.date %}
    <updated>{{ post.date | date_to_xmlschema }}</updated>
+   {% else %}
+   <updated>{{ site.time | date_to_xmlschema }}</updated>
+   {% endif %}
    <id>{{ site.url }}{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
