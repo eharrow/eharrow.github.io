@@ -9,7 +9,7 @@ git template with commit message good form hints.  In addition after a subsequen
 failed the fix with its commit retained the git warning comments in the message when they
 used to be removed.  For posterity sake the `.gitconfig` needs the following lines:
 
-```
+```terminal
 [commit]
         template = /Users/ewan/.gitmessage.txt
         cleanup = strip
@@ -18,7 +18,7 @@ used to be removed.  For posterity sake the `.gitconfig` needs the following lin
 The template file may be named whatever you choose.  Mine has the following to
 remind to prefix with the change type.
 
-```
+```terminal
 # Must be one of the following followed as a summary by a newline and then detail if required:
 
 # feat: A new feature
