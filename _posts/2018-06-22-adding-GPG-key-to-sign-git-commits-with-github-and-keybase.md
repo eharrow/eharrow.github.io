@@ -12,6 +12,9 @@ then you need to add your gpg public key to your github account.  There are two 
 1. get and export your public key to Github.
 2. set up git to sign your commits with your private key.
 
+#### [Update 2019-03-25] SourceTree signing breaks after upgrading the version of gpg
+When using homebrew to upgrade gpg remember that the symlink in `/usr/local/bin` to gpg and gpg2 (that SourceTree looks for) will change and that to make it work after an upgrade with SourceTree you will need to create a soft link to gpg2.  See [ the following link](https://kevingoedecke.me/2018/06/28/setup-sourcetree-with-homebrew-gpg-invalid-gpg-path/).
+
 ## Get, Export and Set Your Public Key
 If you don't have a GPG key pair then consider [FSF's email self defence guide](https://emailselfdefense.fsf.org/en/) which is easy to follow and explains what and why pretty comprehensively.
 
