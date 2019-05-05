@@ -23,4 +23,4 @@ eharrow.github.io.	2731	IN	A	185.199.111.153
 ```
 However [https://blog.ewanharrow.com](https://blog.ewanharrow.com) ended up with a github error page.  A little further reading said that I needed to [enable](https://help.github.com/en/articles/adding-or-removing-a-custom-domain-for-your-github-pages-site) the custom domain on the github pages and voila [https://blog.ewanharrow.com](https://blog.ewanharrow.com) now works once you add the custom domain name and check the https box.
 
-<img src="/public/github-pages-config.png" class="img-fluid">
+![github-pages-config screenshot](/public/images/github-pages-config.png){:class="img-fluid"}

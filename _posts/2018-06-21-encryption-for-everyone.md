@@ -18,6 +18,8 @@ or create a [gist](https://gist.github.com/eharrow/6a12e5b2c160cc26d2a09cb898ca6
 
 This means that someone communicating with me via the Keybase app can trust that I am who I purport to be.  Nice features are end-to-end encrypted chat and end-to-end encrypted file sharing (no cleartext or metadata such as file names stored in the clear).  They now support teams with chat and file sharing as well for free and again encrypted like Slack.  Recently git repos have been added so that even the repo name is effectively encrypted let alone the files and commit history.
 
-When you create an account, set up or import your keys and verify yourself you then have a public facing profile page such as [keybase.io/ewanharrow](https://keybase.io/ewanharrow).  From here you could encrypt a message using my keybase public key or verify a message I might have sent you and thats just in the browser.  <img src="/public/keybase-dot-io-encrypt.png" class="img-fluid">
+When you create an account, set up or import your keys and verify yourself you then have a public facing profile page such as [keybase.io/ewanharrow](https://keybase.io/ewanharrow).  From here you could encrypt a message using my keybase public key or verify a message I might have sent you and thats just in the browser.
+
+![keybase-dot-io-encrypt screenshot](/public/images/keybase-dot-io-encrypt.png){:class="img-fluid"}
 
 Want to import my public key then just copy it or follow the supplied keybase instructions - too easy.
