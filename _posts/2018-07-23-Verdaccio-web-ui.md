@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Verdaccio Publishing
-categories: yarn
+tags: yarn
 comments: true
 ---
 This is a follow on post to [Setting Up a Private NPM Repository with Yarn and Verdaccio]({{ site.baseurl }}{% post_url 2018-05-24-setting-up-npm-private-repo-using-verdaccio-yarn %}) to illustrate publishing to Verdaccio.  Verdaccio seems to work pretty well as a NPM proxy and *private* registry and comes with a web UI to browse your published packages and their dependencies.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Adding a GPG Key to Sign Git Commits with Github and Keybase
-categories: crypto git
+tags: crypto git
 comments: true
 last_updated: 2019-03-25T13:46:54+00:00
 ---

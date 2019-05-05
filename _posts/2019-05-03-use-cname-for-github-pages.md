@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Use Your Own Domain For Github Pages
-categories: github dns
+tags: github dns
 comments: false
 ---
 A Github Pages site is great for hosting a git project's website but can also be used for your own personal site if you like.

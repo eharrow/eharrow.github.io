@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Auto Strip Git Comments
-categories: git
+tags: git
 comments: false
 ---
 I recently acquired a new mac at work and soon realised that I was missing my familiar

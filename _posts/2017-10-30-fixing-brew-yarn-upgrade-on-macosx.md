@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fix Yarn Upgrade Brew Issue
-categories: yarn
+tags: yarn
 comments: true
 ---
 

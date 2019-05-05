@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Docker Day Today
-categories: docker
+tags: docker
 ---
 
 Today is the first day of a new project that involves capturing, persisting and reporting on a lot of data.  It needs to have very HA and be really quick so the weapons of choice are [MongoDB](https://www.mongodb.org) and [Node.js](https://nodejs.org) - basically the [MEAN](http://mean.io) stack.

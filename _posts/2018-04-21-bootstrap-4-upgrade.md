@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bootstrap 4 Upgrade
-categories: web
+tags: web
 comments: true
 ---
 
