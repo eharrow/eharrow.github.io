@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Bootstrap 4 Upgrade
-tags: web
 comments: true
 ---
 
