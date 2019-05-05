@@ -7,7 +7,7 @@ permalink:           pretty
 # Setup
 title:               Ewan Harrow
 tagline:             Imagined Realities
-url:                 //eharrow.github.io
+url:                 //blog.ewanharrow.com
 paginate:            4
 baseurl:             ""
 
@@ -26,6 +26,13 @@ author:
   name:              Ewan Harrow
   url:               https://twitter.com/ewanharrow
   email:             ewan@harrow.org
+
+social:
+  name: Ewan Harrow
+  links:
+    - https://twitter.com/ewanharrow
+    - https://github.com/eharrow
+    - https://keybase.io/ewanharrow
 
 # Custom vars
 version:             2.0.0
