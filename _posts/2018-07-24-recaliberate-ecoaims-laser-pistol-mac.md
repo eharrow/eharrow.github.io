@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Recaliberate an EcoAims Laser Pistol with a Mac
-comments: false
+tags: mac
+comments: true
 ---
 We have had the EcoAims PP500 laser pistol for modern pentathlon competitions for a few months now and used it out of the box without any adjustments.  Recently I found a new place at home which made a decent ten metre range however no of us could hit the target.  From five metres it was generally fine but pulled a bit to the left but we compensated for it.  At ten metres we were off by easily ten cms so I needed to adjust the rear sight.
 
