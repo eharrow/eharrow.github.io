@@ -20,6 +20,6 @@ This means that someone communicating with me via the Keybase app can trust that
 
 When you create an account, set up or import your keys and verify yourself you then have a public facing profile page such as [keybase.io/ewanharrow](https://keybase.io/ewanharrow).  From here you could encrypt a message using my keybase public key or verify a message I might have sent you and thats just in the browser.
 
-![keybase-dot-io-encrypt screenshot](/public/images/keybase-dot-io-encrypt.png){:class="img-fluid"}
+![keybase-dot-io-encrypt screenshot](/public/images/keybase-dot-io-encrypt.png){:class="img-fluid rounded"}
 
 Want to import my public key then just copy it or follow the supplied keybase instructions - too easy.

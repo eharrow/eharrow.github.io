@@ -116,7 +116,7 @@ You won't be asked for credentials until you try to publish.
 
 If you now go to http://localhost:4873 you should see your module listed and drilling down will show the package's details derived from package.json.
 
-![verdaccio-published-module screenshot](/public/images/verdaccio-published-module.png){:class="img-fluid"}
+![verdaccio-published-module screenshot](/public/images/verdaccio-published-module.png){:class="img-fluid rounded"}
 
 ### Testing the Registry
 We might be able to see the new module in the verdaccio registry but it needs to function as a private NPM registry as well i.e. I can use this new module or package from another private module.
