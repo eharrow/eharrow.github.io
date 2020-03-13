@@ -56,8 +56,8 @@
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
   body {
-      background-color: #000;
-      color: white;
+      background-color: #222425;
+      color: rgb(220, 220, 221);
   }
   img {
     opacity: .75;
@@ -68,6 +68,6 @@
     opacity: 1;
   }
   .highlight {
-    background-color: lightgrey;
+    background-color: lightgray;
   }
 }
