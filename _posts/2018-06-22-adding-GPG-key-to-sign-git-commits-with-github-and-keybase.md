@@ -7,7 +7,7 @@ last_updated: 2019-03-25T13:46:54+00:00
 ---
 If you wanted or needed to see a verified label against your git commit e.g.
 
-![gpg-verified-commit screenshot](/public/images/gpg-verified-commit.png){:class="img-fluid"}
+![gpg-verified-commit screenshot](/public/images/gpg-verified-commit.png){:class="img-fluid rounded"}
 
 then you need to add your gpg public key to your github account.  There are two parts to the process:
 1. get and export your public key to Github.
@@ -67,6 +67,6 @@ SourceTree needs to use this version (system) as opposed to the bundled or embed
   $ echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
 ```
 
-![pinentry screenshot](/public/images/pinentry.png){:class="img-fluid"}
+![pinentry screenshot](/public/images/pinentry.png){:class="img-fluid rounded"}
 
 Test with a simple commit and fingers crossed git and gpg are ok.  If there are no complaints then check in Sourcetree that the committer (you) is verified and even better if the remote repo is on Github it should say verified as well.
