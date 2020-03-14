@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add Simple Dark Mode to Bootsrap 4
+title: Add Simple Dark Mode to a Jekyll Blog
 tags: mac
 comments: true
 ---
