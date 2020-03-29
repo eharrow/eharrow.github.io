@@ -16,7 +16,7 @@ I am using SCSS for this blog so the following sets the colours to a light or da
       color: black;
   }
   .highlight {
-    …
+    …………
 }
 
 /* Dark mode */
