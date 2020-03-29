@@ -15,6 +15,8 @@ I am using SCSS for this blog so the following sets the colours to a light or da
       background-color: white;
       color: black;
   }
+  .highlight {
+    …
 }
 
 /* Dark mode */
@@ -32,11 +34,10 @@ I am using SCSS for this blog so the following sets the colours to a light or da
     opacity: 1;
   }
   .highlight {
-    background-color: lightgrey;
-  }
+    …
 }
 ```
 
-On a Mac running Catalina you can switch to Dark Mode
+On a Mac running Catalina you can switch to Dark Mode in System Preferences.
 
 ![mac catalina dark mode screenshot](/public/images/mac-catalina-dark-mode.png){:class="img-fluid rounded"}
