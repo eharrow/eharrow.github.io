@@ -8,7 +8,7 @@ I have been wanting to add a dark theme to this blog ever since Apple introduced
 
 I am using SCSS for this blog so the following sets the colours to a light or dark theme and in the case of dark if dims any images unless hovering over with a mouse when they brighten up.  I also find the white background of the *pre terminal* style to be too bright in the dark theme so I opted to switch the colour to a solarised dark theme but that may change.
 
-```scss
+``` scss
 /* Light mode */
 @media (prefers-color-scheme: light) {
   body {

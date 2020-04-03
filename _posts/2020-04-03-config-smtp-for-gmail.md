@@ -13,9 +13,9 @@ A few sites seem to have old settings that never worked but the following worked
 I created an app specific password in my google account just for this particular
 purpose that meant 2FA was not required.
 
-* SMTP Server: smtp.googlemail.com
-* SMTP Port: 587
-* SMTP TLS/SSL required: yes
-* SMTP username: Your full Gmail address
-* SMTP password: App password created in you google account - https://myaccount.google.com/apppasswords
+* SMTP Server: **smtp.googlemail.com**
+* SMTP Port: **587**
+* SMTP TLS/SSL required: **yes**
+* SMTP username: **Your full Gmail address**
+* SMTP password: **App password created in you google account** - see [https://myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords)
 
