@@ -2,7 +2,7 @@
 layout: post
 title: Generating a Jekyll post with Yeoman
 comments: true
-tags: jekyll
+tags: javascript automation
 ---
 It is really easy to create a new Jekyll blog post - create a new markdown file with a kebab file name consisting of the date and post title plus the metadata at the top e.g. __2020-05-02-generating-a-jekyll-post-with-yeoman.md__
 ```

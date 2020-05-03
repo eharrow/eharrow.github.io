@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Configure a Service to Send Email Via Gmail SMTP
-# tags: mac
+tags: email
 comments: true
 ---
 It turns out I have lost the email notifications my Synology NAS had been sending

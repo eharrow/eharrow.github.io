@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Export a Mac's Contacts or Address Book
-tags: mac
+tags: mac email automation
 comments: true
 ---
 As part of my [callerid](https://github.com/eharrow/callerid) project I use a simple CSV address book to lookup names from an inbound call.  Having to maintain this manually in a spreadsheet is far too painful if I can just export from a master source from time to time and as I keep my addresses synced in my mac and phone using the Contacts app I just need a away to export them to a file.  Natively the Contacts app can export as a [vCard](https://en.wikipedia.org/wiki/VCard) and I am sure there must be suitable parsers to read one but that would mean changing my super simple CSV address book code.  What is interesting is that like a number of Apple applications it uses Sqlite as its backing store.  Crack open the file, run some queries and you can retrieve contact data.
