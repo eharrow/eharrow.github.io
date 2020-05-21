@@ -21,6 +21,10 @@ url:                 //blog.ewanharrow.com
 paginate:            4
 baseurl:             ""
 
+# http://www.fizerkhan.com/blog/posts/Working-with-upcoming-posts-in-Jekyll.html
+future: false
+show_drafts: false
+
 markdown: kramdown
 highlighter: rouge
 
