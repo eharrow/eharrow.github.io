@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Drain RabbitMQ Queues
-tags: javascript
+tags: javascript rabbit cli
 comments: true
 ---
 One thing that I find that we always need to do when developing with message queues is to occassionally remove, purge or drain all the messages from a queue.  More often than not this is after some testing and the messages are not not being acked and removed in the usual way but it might be that we just want to test publishing to a queue and need to verify that the messages are sent.
