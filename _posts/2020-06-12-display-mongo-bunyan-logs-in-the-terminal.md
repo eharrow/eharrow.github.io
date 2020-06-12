@@ -2,7 +2,7 @@
 layout: post
 title: Display Mongo Bunyan Logs In The Terminal
 comments: true
-tags: mongo cli
+tags: mongodb cli
 
 ---
 If you use Bunyan and decide to use a MongoDB as a logging appender (destination) then you will arguably know what a great use of MongoDB it can be.  Querying is easy but sometimes visibly parsing a raw Bunyan log entry JSON is a pain but luckily Bunyan CLI will parse and display these in a much easier format.  However just extracting the raw Mongo documents using Robomongo and piping to bunyan will not work as the document schema and extra added Robomongo cruft differs a little making it non-parseable by Bunyan therefore we need to transform the entries a little which we can do using standard Mac or linux utils.
