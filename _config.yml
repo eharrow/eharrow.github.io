@@ -57,6 +57,7 @@ social:
 plugins:
   - jekyll-paginate
   - jemoji
+  - jekyll-time-to-read
 #  - jekyll-gist
 
 pages_list:
