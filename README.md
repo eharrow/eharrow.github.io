@@ -16,3 +16,5 @@ Then generate your new jekyll post md file which will be created in the current 
 ```bash
 yo jekyll-post
 ```
+
+[![Dependabot auto-merge](https://github.com/eharrow/eharrow.github.io/actions/workflows/dependabot-auto-merge.yaml/badge.svg)](https://github.com/eharrow/eharrow.github.io/actions/workflows/dependabot-auto-merge.yaml)
