@@ -15,11 +15,11 @@
 # in the templates via {{ site.myvariable }}.
 
 # Setup
-title:               Ewan Harrow
-tagline:             Imagined Realities
-url:                 //blog.ewanharrow.com
-paginate:            4
-baseurl:             ""
+title: Ewan Harrow
+tagline: Imagined Realities
+url: //blog.ewanharrow.com
+paginate: 4
+baseurl: ""
 
 # http://www.fizerkhan.com/blog/posts/Working-with-upcoming-posts-in-Jekyll.html
 future: false
@@ -31,21 +31,21 @@ highlighter: rouge
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
+permalink: pretty
 #relative_permalinks: true
 
 # Assets
 #
 # We specify the directory for Jekyll so we can use @imports.
 sass:
-  sass_dir:          _sass
-  style:            :compressed
+  sass_dir: _sass
+  style: :compressed
 
 # About/contact
 author:
-  name:              Ewan Harrow
-  url:               https://twitter.com/ewanharrow
-  email:             ewan@harrow.org
+  name: Ewan Harrow
+  url: https://twitter.com/ewanharrow
+  email: ewan@harrow.org
 
 social:
   name: Ewan Harrow
@@ -62,5 +62,8 @@ plugins:
 
 pages_list:
   #Contact: '/contact'
-  Archive: '/archive'
-  Feed: '/atom.xml'
+  Archive: "/archive"
+  Feed: "/atom.xml"
+
+github: [metadata]
+encoding: UTF-8
