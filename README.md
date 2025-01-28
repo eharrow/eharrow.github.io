@@ -16,3 +16,15 @@ Then generate your new jekyll post md file which will be created in the current 
 ```bash
 yo jekyll-post
 ```
+
+## Update the copyright date for a new year
+Simply create a new branch (branch protection on master is activated), perform a trigger build to
+push an empty update, open a PR and merge to master.  The jekyll GH build will cause the footer date expression
+to re-execute.
+
+```bash
+git branch update-2025-footer
+git co update-2025-footer
+git commit -m "Trigger build" --allow-empty
+git push --set-upstream origin update-2025-footer
+```
