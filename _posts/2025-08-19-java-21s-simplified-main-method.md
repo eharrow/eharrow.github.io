@@ -1,11 +1,9 @@
 ---
 layout: post
-title: "Java 21's Simplified Main Method"
+title: "Introducing Unnamed Classes and Simplified Main Methods in Java"
 date: 2025-08-19
 categories: java programming
 ---
-## Introducing Unnamed Classes and Simplified Main Methods in Java
-
 Java has long been known for its verbosity, especially when it comes to writing simple scripts or
 small programs. With <b>Java 21's introduction of simplified main methods</b>, developers can now
 write more concise and readable entry points for their applications.  The feature is primarily to
