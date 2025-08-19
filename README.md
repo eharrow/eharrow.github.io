@@ -17,6 +17,15 @@ Then generate your new jekyll post md file which will be created in the current 
 yo jekyll-post
 ```
 
+## Running locally in Docker
+Spin up docker and use the `docker-compose.yml`.  This will watch for changes in the `_posts`
+directory so add changes there - on a new branch of course.
+
+A gotcha is that it uses the latest jekyll image but the `Gemfile.lock` might have incompatibilities so
+it is best to delete and rerun docker compose and a upto date version will be created.
+
+Also remove the contents of the `_site` directory as these are cached.
+
 ## Update the copyright date for a new year
 Simply create a new branch (branch protection on master is activated), perform a trigger build to
 push an empty update, open a PR and merge to master.  The jekyll GH build will cause the footer date expression
