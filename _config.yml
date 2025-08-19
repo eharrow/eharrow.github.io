@@ -66,4 +66,5 @@ pages_list:
   Feed: "/atom.xml"
 
 github: [metadata]
+repository: eharrow/eharrow.github.io
 encoding: UTF-8
