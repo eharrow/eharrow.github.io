@@ -3,18 +3,24 @@ This is a [Jekyll](https://jekyllrb.com) powered blog that works on Github. I us
 
 To run locally the simplest thing is to use `docker-compose up`. and `open http://localhost:4000`.
 
-First, install [Yeoman](http://yeoman.io) and [generator-jekyll-post](https://blog.ewanharrow.com/2020/05/02/generating-a-jekyll-post-with-yeoman/) using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+## Start off with a _post_ file entry
+Use the AddPost CLI which will prompt for title etc. (has defaults) and spits out a jekyll front-matter header to start you off:
+```shell
+$ java --enable-preview AddPost.java
+Enter post title => test
+Enter post date dd/mm/yyyy [02/09/2025] => 
+Enter post categories [java programing] => 
 
-```bash
-npm install -g yo
-npm install -g generator-jekyll-post
-```
+Save the following to a new file named: 2025-09-02-test.md
 
-
-Then generate your new jekyll post md file which will be created in the current directory so you'll need to move it to _posts afterwards:
-
-```bash
-yo jekyll-post
+---
+layout: post
+title: "test"
+date: 2025-09-02
+categories: java programing
+---
+## Here is a heading about
+This is a paragraph
 ```
 
 ## Running locally in Docker
