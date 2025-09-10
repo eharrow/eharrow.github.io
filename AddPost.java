@@ -1,3 +1,7 @@
+/* Creates a new post page from a couple of questions.
+* This makes use of simplified main method in Java
+*/
+
 void main() {
   String template = """
       ---
