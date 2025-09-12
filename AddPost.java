@@ -1,6 +1,10 @@
 /* Creates a new post page from a couple of questions.
-* This makes use of simplified main method in Java
-*/
+ * This makes use of simplified main method in Java
+ */
+
+import static java.lang.IO.println;
+import static java.lang.IO.readln;
+import static java.util.function.Predicate.not;
 
 void main() {
   String template = """
@@ -14,23 +18,32 @@ void main() {
       This is a paragraph
       """;
   String defaultDate = LocalDate.now().format(FORMATTER);
-  var title = Optional.ofNullable(IO.readln(PROMPT_TITLE))
-      .filter(Predicate.not(String::isBlank))
+  var title = Optional.ofNullable(readln(PROMPT_TITLE))
+      .filter(not(String::isBlank))
       .orElse("A New Post");
-  var dateStr = Optional.ofNullable(IO.readln(
-          String.format("Enter post date (dd/mm/yyyy) %s[%s]%s => ", ANSI_BOLD_COLOUR, defaultDate, ANSI_RESTORE)))
-      .filter(Predicate.not(String::isBlank))
-      .orElseGet(() -> defaultDate);
+  var dateStr = Optional.ofNullable(readln(
+          String.format("Enter post date (dd/mm/yyyy) %s[%s]%s => ", ANSI_BOLD_COLOUR, defaultDate,
+              ANSI_RESTORE)))
+      .filter(not(String::isBlank))
+      .orElse(defaultDate);
   var date = LocalDate.parse(dateStr, FORMATTER);
 
-  var cats = Optional.ofNullable(IO.readln(PROMPT_CATS))
-      .filter(Predicate.not(String::isBlank))
+  var cats = Optional.ofNullable(readln(PROMPT_CATS))
+      .filter(not(String::isBlank))
       .orElse("java programing");
 
   var kebabTitle = title.toLowerCase().replaceAll(" ", "-");
-  IO.println(String.format("\n\nSave the following to a new file named: " + ANSI_BOLD_COLOUR + "%s-%s.md" + ANSI_RESTORE + "\n", date, kebabTitle));
-  String out = String.format(template, title, date, cats);
-  IO.println(out);
+
+  println(String.format("""
+      Save the output to a new file named %s%s-%s.md%s as a Here Document.  The command is below.
+      """, ANSI_BOLD_COLOUR, date, kebabTitle, ANSI_RESTORE));
+  String fileContent = String.format(template, title, date, cats);
+  String exampleCmd = String.format("""
+      cat <<EOF > %s-%s.md
+      %s
+      EOF
+      """, date, kebabTitle, fileContent);
+  println(exampleCmd);
 }
 
 private static final String ANSI_BOLD_COLOUR = "\033[1;32m";
