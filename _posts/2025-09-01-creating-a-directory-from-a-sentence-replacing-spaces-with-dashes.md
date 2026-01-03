@@ -19,7 +19,7 @@ set -o errexit
 set -o pipefail
 
 target_dir=$1
-mkdir $(echo ${target_dir} | tr ' ' '-' | tr '[:upper:]' '[:lower:]')
+mkdir -p $(echo ${target_dir} | tr ' ' '-' | tr '[:upper:]' '[:lower:]')
 ```
 
 and then
@@ -27,4 +27,5 @@ and then
 $ chmod +x mklongdir
 ```
 Using it as `mklongdir "Creating a Directory from a Sentence Replacing Spaces with Dashes"` will
-create the directory `creating-a-directory-from-a-sentence-replacing-spaces-with-dashes`.
+create the directory `creating-a-directory-from-a-sentence-replacing-spaces-with-dashes`. To make any parent directories
+then just prefix with the usual path separator `mklongdir "parent/parent/Creating a Directory from a Sentence Replacing Spaces with Dashes"`.
